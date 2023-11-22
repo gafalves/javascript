@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3 do curso de JS</title>
+</head>
+<style>
+
+    body{font: 12px Arial;}
+
+    button{ font-size: 20px; padding: 20px;}
+
+    .text-center{text-align: center;}
+
+    h1{text-align: center;}
+
+</style>
+<body>
+    <h1>Trabalhando com dados v1.0</h1>
+    <div class="text-center"><button onclick="inicio()">Clique para começar</button></div>
+    <script>
+        function inicio() {
+            let nome = window.prompt('Qual é o seu nome?')
+            window.alert(`Olá, ${nome}! É um prazer te conhecer!`)
+        }
+    </script>
+    
+</body>
+</html>

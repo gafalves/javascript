@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 3 do curso de JS</title>
+</head>
+<body>
+    
+    <h1>Antes e depois</h1>
+
+    <button onclick="antsuc()">Antecessor e sucessor</button>
+
+    <script>
+
+        function antsuc() {
+
+            let n = Number(window.prompt('Digite um número inteiro qualquer'))
+            let ant = n - 1
+            let suc = n + 1
+            window.alert(`Antes de ${n}, temos ${ant}.\nDepois de ${n}, temos ${suc}.`)
+
+        }
+
+    </script>
+
+</body>
+</html>

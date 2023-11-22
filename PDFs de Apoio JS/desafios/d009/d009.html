@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 9 do curso de JS</title>
+</head>
+<body>
+    <h1>Reajuste salarial</h1>
+    <button onclick="reajuste()">Reajustar salário</button>
+    <section id="resultado">
+        <p>Clique no botão acima para começar.</p>
+    </section>
+    <script>
+        function reajuste() {
+            let nome = window.prompt('Qual é o nome do fucionário?')
+            let sal = Number(window.prompt(`Qual é o salário de ${nome}?`))
+            let porc = Number(window.prompt(`Qual será a porcentagem de reajuste para o salário de ${nome}?`))
+            let aum = sal * porc / 100
+            let nsal = sal + aum
+            let res = window.document.getElementById('resultado')
+            res.innerHTML = `<p style="font-size: 30px; font-weight: bold;">${nome} recebeu ${porc}% de aumento no salário!</p>`
+            res.innerHTML += `<p>O salário antigo era R$ ${sal}.</p>`
+            res.innerHTML += `<p>Com um aumento de ${porc}%, o salário vai aumentar R$ ${aum.toFixed(2)} à partir do próximo mês.</p>`
+            res.innerHTML += `<p>Então, o novo salário de ${nome} será R$ ${nsal.toFixed(2)}.</p>`
+        }
+    </script>
+</body>
+</html>

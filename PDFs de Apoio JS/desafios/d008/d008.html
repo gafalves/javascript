@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 8 do curso de JS</title>
+</head>
+<style>
+    button{
+        font-size: 20px;
+        font-weight: bold;
+        padding: 30px;
+    }
+
+    p{
+        font-size: 20px;
+    }
+</style>
+<body>
+    <h1>Cupom de 10% de desconto</h1>
+    <button onclick="desconto()">Clique aqui para receber o desconto</button>
+    <section id="resultado">
+        <p>Clique no botão acima para receber o desconto.</p>
+    </section>
+    <script>
+        function desconto() {
+            let prod = window.prompt('Qual é o produto que está sendo comprado?')
+            let preco = Number(window.prompt(`Qual é o preço de ${prod}?`))
+            let desc = preco * 10 / 100
+            let npreco = preco * 90 / 100
+            let res = window.document.getElementById('resultado')
+            res.innerHTML = `<p style="font-size: 20px; font-weight: bold;">Parabéns! Você ganhou 10% de desconto.</p>`
+            res.innerHTML += `<p>O preço original era ${preco.toFixed(2)}.</p>`
+            res.innerHTML += `<p>Você ganhou R$ ${desc.toFixed(2)} de desconto (-10%).</p>`
+            res.innerHTML += `<p>Portanto, você vai pagar apenas R$ ${npreco.toFixed(2)} pelo produto ${prod}.</p>`
+        }
+    </script>
+</body>
+</html>

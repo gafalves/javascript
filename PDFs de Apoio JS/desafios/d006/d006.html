@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 6 do curso de JS</title>
+</head>
+<body>
+    <h1>Conversor de temperaturas</h1>
+    <button onclick="converter()">Converter</button>
+    <section id="resultado">
+        <p>Clique no botão acima para iniciar a conversão.</p>
+    </section>
+    <script>
+        function converter() {
+            let c = Number(window.prompt('Digite a temperatura em °C (Celsius): '))
+            let f = c * 1.8 + 32
+            let k = c + 273.15
+            let res = window.document.getElementById('resultado')
+            res.innerHTML = `<p>A temperatura ${c.toFixed(1)}°C equivale a:</p>`
+            res.innerHTML += `<p>${k.toFixed(1)}°K (Kelvin)</p>`
+            res.innerHTML += `<p>${f.toFixed(1)}°F (Farenheit)</p>`
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 9 do curso de JS</title>
+</head>
+<style>
+    body{
+        font-size: 20px;
+    }
+
+    button{
+        font-size: 15px; padding: 20px;
+    }
+</style>
+<body>
+    <h1>Contador de cliques</h1>
+    <button onclick="contar()">Clique aqui</button>
+    <button onclick="zerar()">Zerar contador</button>
+    <section id="resultado">
+        <p>O contador está com <mark>0</mark> cliques.</p>
+    </section>
+    <script>
+        let contador = 0
+
+        let res = window.document.getElementById('resultado')
+        
+        function contar() {
+            contador ++ // É a mesma coisa que contador = contador + 1
+            res.innerHTML = `<p>O contador está com <mark>${contador}</mark> cliques.</p>`  
+        }
+
+        function zerar() {
+            contador = 0
+            res.innerHTML = `<p>O contador está com <mark>0</mark> cliques.</p>`
+        }
+    </script>
+</body>
+</html>

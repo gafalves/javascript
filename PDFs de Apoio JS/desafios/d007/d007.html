@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 7 do curso de JS</title>
+</head>
+<body>
+    <h1>Conversor R$ &rarr; US$</h1>
+    <button onclick="converter()">Converter</button>
+    <section id="resultado">
+        <p>Clique no botão acima para iniciar a conversão.</p>
+    </section>
+    <script>
+        let cot = Number(window.prompt('Antes de mais nada, qual é a cotação atual do dólar?'))
+        function converter() {
+            let reais = Number(window.prompt('Quantos R$ você quer converter?'))
+            let dolares = reais / cot
+            let res = window.document.getElementById('resultado')
+            res.innerHTML = `<p>Com R$${reais} você consegue comprar US$${dolares.toFixed(2)}.</p>`
+        }
+    </script>
+</body>
+</html>

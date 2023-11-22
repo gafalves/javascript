@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 10 do curso de JS</title>
+</head>
+<body>
+    <h1>Resolvendo Bhaskara</h1>
+    <button onclick="calcular()">Calcular</button>
+    <section id="resultado">
+        <p>Considerando uma equação no formato ax<sup>2</sup> + bx + c = 0, aperte o botão acima para calcular o valor de &Delta;.</p>
+    </section>
+    <script>
+        function calcular() {
+            let a = Number(window.prompt('Qual é o valor de a?'))
+            let b = Number(window.prompt('Qual é o valor de b?'))
+            let c = Number(window.prompt('Qual é o valor de c?'))
+            let d = b ** 2 - 4 * a * c
+            let res = window.document.getElementById('resultado')
+            res.innerHTML = `<h2>Resolvendo Bhaskara</h2>`
+            res.innerHTML += `<p>A equação atual é ${a}x<sup>2</sup> + ${b}x + 2 = 0</p>`
+            res.innerHTML += `<p>O cálculo realizado será &Delta; = ${b}<sup>2</sup> - 4.${a}.${c}</p>`
+            res.innerHTML += `<p>O valor calculado foi &Delta; = ${d}</p>`
+        }
+    </script>
+</body>
+</html>
